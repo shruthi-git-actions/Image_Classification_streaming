@@ -1,0 +1,4 @@
+[core]
+    remote = r_storage
+['remote "r_storage"']
+    url = s3://flask-image-data/
