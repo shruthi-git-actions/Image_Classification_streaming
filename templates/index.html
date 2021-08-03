@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Image Classification</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+ <div class="container">
+    <h1 class="jumbotron bg-primary">Image Classfication</h1>
+    <br><br>
+    <form class="form-horizontal" action="/submit" method="post" enctype="multipart/form-data">
+    <img src="{{ user_image }}" height="400px" width="400px">
+    </form>
+    
+
+
+    {% if prediction %}
+    
+    <h2> Your Prediction   : <i> {{prediction}} </i></h2>
+  
+    {% endif %}
+  
+  </div>
+
+  
+</body>
+</html>
+  

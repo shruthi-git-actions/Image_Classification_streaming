@@ -1,0 +1,21 @@
+stages:
+  
+  Training:
+    cmd: python train_mobnet.py 
+    deps:
+      - train_mobnet.py
+      - data/train
+    live:
+      training_metrics:
+        summary: true
+        html: true
+
+
+
+      
+  Testing:
+    cmd: python app.py 
+    deps:
+      - app.py 
+      - mob_model_catdog.h5
+    
